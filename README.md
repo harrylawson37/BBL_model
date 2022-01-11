@@ -17,6 +17,12 @@ The files **bbl_bbb_database_create.R**, **bbl_bbb_database_update.R** and **bbl
 The file **bbl_bbb_final.csv** contain the ball by ball information for every bbl game.
 Information from espncricinfo is used to manually add in a new player's batting hand, bowling arm, bowling type and country to **bbl_player_ID_MAIN.csv**. I have chosen to do this manually because it requires little time.
 
+To update the files run the following code in **bbl_bbb_database_update.R**
+```
+update_player_info()
+update_bbl_bbb()
+```
+
 #### Functions for Player Statistics
 The file **bbl_likelihood_functions.R** contains the relevant functions to simulate any ball between a bowler and batsman at a particular over and cricket ground.
 
@@ -35,9 +41,16 @@ The file **bbl_MC_simulation_log5.R** runs a match for a certain number of simul
 The file **bbl_decimal_odds.R** creates a variety of dataframes containing odds for team and player sports betting markets.
 
 #### Creation of Excel File
-The file **bbl_create_excel.R** contains a function for the template for the final excel file. The file bbl_realmatchsimulation.R uses a function to add the team lineup's, batting order's and bowling order's.
+The file **bbl_create_excel.R** contains a function for the template for the final excel file. The file **bbl_realmatchsimulation.R** uses a function to add the team lineup's, batting order's and bowling order's.
 
 ## Example of Excel File
-
+In **bbl_realmatchsimulation.R** run:
+```
+bbl_match_odds("Stars", "Scorchers", c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 
+               c(10, 11, 10, 8, 11, 11, 11, 9, 9, 9, 10, 10, 9, 8, 8, 8, 7, 7, 3, 3), 
+               c(10, 9, 10, 11, 11, 11, 11, 10, 10, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7),
+               c(19.5, 27.5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
+               c(22.5, 16.5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 2000, stadium = "Melbourne Cricket Ground", batting_first = 'T2')
+```
 
 
