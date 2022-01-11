@@ -13,11 +13,11 @@ name_ID <- function(files){
   # The following function creates a data frame and adds all the player names 
   # and player ID's from every BBL match.
   
-  # parameter files:   list of files
+  # parameter files:   vector of bbl match files
   # return:            data frame of player names and player ID's
   # time complexity:   o(n*m^2) where n is the length of the files and m is the number of players
   # precondition:      files should be json files
-  # post_condition:     columns in data frame should be of even length
+  # post_condition:    columns in data frame should be of even length
   
   player_ID = vector(mode="character", length=10000) 
   player_name = vector(mode='character', length=10000)
