@@ -17,8 +17,9 @@ The files **bbl_bbb_database_create.R**, **bbl_bbb_database_update.R** and **bbl
 The file **bbl_bbb_final.csv** contain the ball by ball information for every bbl game.
 Information from espncricinfo is used to manually add in a new player's batting hand, bowling arm, bowling type and country to **bbl_player_ID_MAIN.csv**. I have chosen to do this manually because it requires little time.
 
-To update the files run the following code in **bbl_bbb_database_update.R**
+To retrieve the files from cricsheet.org and update the databases run the following code in **bbl_bbb_database_update.R**
 ```
+update_bbl_json()
 update_player_info()
 update_bbl_bbb()
 ```
