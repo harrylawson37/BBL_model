@@ -9,7 +9,7 @@ bbl_bbb <- function(files){
   
   # parameter files:   vector of bbl match files
   # return:            data frame of ball by ball information
-  # time complexity:   o(n*m^2) where n is the length of the files and m is the number of players
+  # time complexity:   o(n) where n is the number of balls in bbl history
   # precondition:      files should be json files
   # post_condition:    columns in data frame should be of even length
   
