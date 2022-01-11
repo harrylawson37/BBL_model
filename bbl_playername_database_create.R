@@ -15,7 +15,7 @@ name_ID <- function(files){
   
   # parameter files:   vector of bbl match files
   # return:            data frame of player names and player ID's
-  # time complexity:   o(n*m^2) where n is the length of the files and m is the number of players
+  # time complexity:   o(n*m) where n is the number of balls in BBL history and m is the number of players
   # precondition:      files should be json files
   # post_condition:    columns in data frame should be of even length
   
