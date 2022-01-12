@@ -110,3 +110,8 @@ bbl_match_odds("Heat", "Strikers", c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), c(1, 2,
 ![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme3.png)
 
 
+## Room for Improvement
+A few things I'd like to improve
+- include run outs
+- minimise the reliance on estimating the bowling lineups
+
