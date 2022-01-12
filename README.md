@@ -29,21 +29,65 @@ The file **bbl_likelihood_functions.R** contains the relevant functions to simul
 
 The functions use the last x number of balls the bowler or batsman have faced. The value of x can be altered depending on how much recent form is weighted against a larger dataset. They also use a shrinkage estimator for players with an insufficient amount of data by moving a players statistical average towards the statistical average of that players bowling type or batting number. 
 
+The following player statistics functions are used
+```
+wickets_at_over_likelihood(df, over, stadium = FALSE)
+runs_at_over_likelihood(df, runs, over, stadium = FALSE)
+bowler_runs_likelihood(df, player_name, runs)
+bowling_wicket_likelihood(df, player_name)
+batter_runs_likelihood(df, player_name, runs, batting_number)
+batting_wicket_likelihood(df, player_name, batting_number)
+```
+
 #### Simulation of a Ball
 The file **bbl_ball_simulation_log5.R** simulates a ball by using the log5 function for individual matchups and the functions for player statistics.
+
+The following functions are used to simulate a ball
+```
+log5(z, x, y)
+the_ball(over_p_zero, bowler_zero, batter_zero, over_p_one, bowler_one, batter_one, over_p_two, bowler_two, batter_two, 
+                     over_p_three, bowler_three, batter_three, over_p_four, bowler_four, batter_four, over_p_five, bowler_five, 
+                     batter_five, over_p_six, bowler_six, batter_six, over_p_wicket, bowler_wicket, batter_wicket)
+```
 
 #### Simulation of an Innings
 The file **bbl_MC_simulation_log5.R** simulates an innings assuming that the possibilities from any ball are a zero, one, two, three, four, five, six or wicket.
 
+The following functions are used to simulate an innings
+```
+over_permutation(bowling_order, first_four = FALSE)
+innings_sim(overs_probs_df, bowling_probs_df, batting_probs_df, 
+            bowling_order_list, ff_T_or_F, runs_required = NULL)
+```
+
 #### Simulation of Matches
 The file **bbl_MC_simulation_log5.R** runs a match for a certain number of simulations and collects player and team statistics for the simulations.
+
+The following function is used run match simulations
+```
+bbl_innings_MC(df, team_one, team_two, t1_bowling_order_list, t2_bowling_order_list, MC_length, 
+                           t1_over_under = c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),      
+                           t2_over_under=c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), stadium = FALSE)
+```
 
 #### Creation of Odds Markets
 The file **bbl_decimal_odds.R** creates a variety of dataframes containing odds for team and player sports betting markets.
 
-#### Creation of Excel File
+The following function is used to get the decimal odds for player sports betting markets
+```
+get_decimal_odds(df, team_one_name, team_two_name, team_one_players, team_two_players, team_one_bowling_order, team_two_bowling_order, MC_simulations,
+                             t1_over_under = c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), 
+                             t2_over_under=c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), stadium = FALSE)
+```
+#### 
+Creation of Excel File
 The file **bbl_create_excel.R** contains a function for the template for the final excel file. The file **bbl_realmatchsimulation.R** uses a function to add the team lineup's, batting order's and bowling order's.
 
+The following function is used to create a formatted excel file
+```
+create_excel_file(team_one_name, team_two_name, team_one_b1, team_two_b2, team_one_header_style, 
+                              team_one_cell_style, team_two_header_style, team_two_cell_style)
+```
 ## Example of Excel File
 In **bbl_realmatchsimulation.R** run:
 ```
