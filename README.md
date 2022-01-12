@@ -98,11 +98,16 @@ create_excel_file(team_one_name, team_two_name, team_one_b1, team_two_b2, team_o
 ## Example of Excel File
 In **bbl_realmatchsimulation.R** run:
 ```
-bbl_match_odds("Stars", "Scorchers", c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 
-               c(10, 11, 10, 8, 11, 11, 11, 9, 9, 9, 10, 10, 9, 8, 8, 8, 7, 7, 3, 3), 
-               c(10, 9, 10, 11, 11, 11, 11, 10, 10, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7),
-               c(19.5, 27.5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
-               c(22.5, 16.5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 2000, stadium = "Melbourne Cricket Ground", batting_first = 'T2')
+bbl_match_odds("Heat", "Strikers", c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
+               c(10, 7, 10, 8, 11, 11, 11, 11, 10, 10, 9, 9, 9, 8, 8, 8, 9, 7, 7, 7),
+               c(2, 10, 9, 11, 11, 11, 11, 2, 2, 2, 9, 9, 9, 10, 10, 10, 7, 7, 7, 7),
+               4000, stadium = "Brisbane Cricket Ground", batting_first = 'T2')
 ```
+
+![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme1.png)
+![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme2.png)
+![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme4.png)
+![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme5.png)
+![alt text](https://github.com/harrylawson37/BBL_model/blob/main/example_for_readme3.png)
 
 
