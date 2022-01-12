@@ -51,10 +51,11 @@ The file **bbl_ball_simulation_log5.R** simulates a ball by using the log5 funct
 
 The following functions are used to simulate a ball
 ```
-log5(z, x, y)
+log5(z, x, y, over_stadium_likelihood)
 the_ball(over_p_zero, bowler_zero, batter_zero, over_p_one, bowler_one, batter_one, over_p_two, bowler_two, batter_two, 
                      over_p_three, bowler_three, batter_three, over_p_four, bowler_four, batter_four, over_p_five, bowler_five, 
-                     batter_five, over_p_six, bowler_six, batter_six, over_p_wicket, bowler_wicket, batter_wicket)
+                     batter_five, over_p_six, bowler_six, batter_six, over_p_wicket, bowler_wicket, batter_wicket,
+                     zero, one, two, three, four, five, six, wicket)
 ```
 
 #### Simulation of an Innings
@@ -64,7 +65,8 @@ The following functions are used to simulate an innings
 ```
 over_permutation(bowling_order, first_four = FALSE)
 innings_sim(overs_probs_df, bowling_probs_df, batting_probs_df, 
-            bowling_order_list, ff_T_or_F, runs_required = NULL)
+                        bowling_order_list, ff_T_or_F, zero, one, two, three, four,
+                        five, six, wicket, runs_required = NULL)
 ```
 
 #### Simulation of Matches
@@ -73,8 +75,7 @@ The file **bbl_MC_simulation_log5.R** runs a match for a certain number of simul
 The following function is used run match simulations
 ```
 bbl_innings_MC(df, team_one, team_two, t1_bowling_order_list, t2_bowling_order_list, MC_length, 
-                           t1_over_under = c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),      
-                           t2_over_under=c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), stadium = FALSE)
+                            stadium = FALSE)
 ```
 
 #### Creation of Odds Markets
@@ -82,9 +83,7 @@ The file **bbl_decimal_odds.R** creates a variety of dataframes containing odds 
 
 The following function is used to get the decimal odds for player sports betting markets
 ```
-get_decimal_odds(df, team_one_name, team_two_name, team_one_players, team_two_players, team_one_bowling_order, team_two_bowling_order, MC_simulations,
-                             t1_over_under = c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), 
-                             t2_over_under=c(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL), stadium = FALSE)
+get_decimal_odds(df, team_one_name, team_two_name, team_one_players, team_two_players, team_one_bowling_order, team_two_bowling_order, MC_simulations, stadium = FALSE)
 ```
 #### 
 Creation of Excel File
