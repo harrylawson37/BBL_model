@@ -115,3 +115,6 @@ A few things I'd like to improve
 - include run outs
 - minimise the reliance on estimating the bowling lineups
 
+
+Copyright © 2022 Harry Lawson
+
