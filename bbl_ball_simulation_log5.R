@@ -38,7 +38,8 @@ the_ball <- function(over_p_zero, bowler_zero, batter_zero, over_p_one, bowler_o
   # parameter bowler_*: The likelihood of occurrence for the bowler (float)
   # parameter batter_*: The likelihood of occurrence for th batsman (float)
   # parameter *:        The general likelihood of occurrence (float)
-  
+  # time complexity:    O(1)     
+
   # note that * represents any number
   
   adjusted_zero_probability = log5(zero, bowler_zero, batter_zero, over_p_zero)
