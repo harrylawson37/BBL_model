@@ -31,6 +31,13 @@ The functions use the last x number of balls the bowler or batsman have faced. T
 
 The following player statistics functions are used
 ```
+wicket_likelihood(df)
+one_likelihood(df)
+two_likelihood(df)
+three_likelihood(df)
+four_likelihood(df)
+five_likelihood(df)
+six_likelihood(df)
 wickets_at_over_likelihood(df, over, stadium = FALSE)
 runs_at_over_likelihood(df, runs, over, stadium = FALSE)
 bowler_runs_likelihood(df, player_name, runs)
